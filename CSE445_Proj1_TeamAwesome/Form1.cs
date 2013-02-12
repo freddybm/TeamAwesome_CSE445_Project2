@@ -15,5 +15,28 @@ namespace CSE445_Proj1_TeamAwesome
         {
             InitializeComponent();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private String Encoder(object o)
+        {
+            String order = o.ToString(); // Converts OrderObject into a string
+            String eMessage;
+            EncryptionService.ServiceClient Encoder = new EncryptionService.ServiceClient();
+            eMessage = Encoder.Encrypt(order); // Encodes the string
+            return eMessage;  
+        }
+
+        private Object Decoder(string e)
+        {
+            Object o;
+            EncryptionService.ServiceClient Decoder = new EncryptionService.ServiceClient();
+            Decoder.Decrypt(e);  // Decodes the string
+            o = e;  // Converts Decrypted string back into OrderObject
+            return o;
+        }
     }
 }
