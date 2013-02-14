@@ -8,3 +8,4 @@ C:\Users\Amp\Dropbox\School\ASU Classes Spring 2013\CSE 445\Assignment 2\CSE445_
 C:\Users\Amp\Dropbox\School\ASU Classes Spring 2013\CSE 445\Assignment 2\CSE445_Proj1_TeamAwesome\CSE445_Proj1_TeamAwesome\obj\x86\Debug\CSE445_Proj1_TeamAwesome.pdb
 C:\Users\uzarco\Documents\GitHub\TeamAwesome_CSE445_Project2\CSE445_Proj1_TeamAwesome\obj\x86\Debug\CSE445_Proj1_TeamAwesome.exe
 C:\Users\uzarco\Documents\GitHub\TeamAwesome_CSE445_Project2\CSE445_Proj1_TeamAwesome\obj\x86\Debug\CSE445_Proj1_TeamAwesome.pdb
+C:\Users\uzarco\Documents\GitHub\TeamAwesome_CSE445_Project2\CSE445_Proj1_TeamAwesome\bin\Debug\CSE445_Proj1_TeamAwesome.exe.config
