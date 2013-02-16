@@ -6,6 +6,7 @@ using System.Threading;
 
 namespace CSE445_Proj1_TeamAwesome
 {
+    
 
     static class Program
     {
@@ -13,7 +14,7 @@ namespace CSE445_Proj1_TeamAwesome
         /// The main entry point for the application.
         /// </summary>
         [STAThread]
-        
+
         public delegate void priceCutEvent(Int32 pr); //define a delegate
 
         public class HotelSupplier
@@ -56,6 +57,9 @@ namespace CSE445_Proj1_TeamAwesome
             public class Agency
             {
                 private int roomNum = 0;
+                private DateTime sent;
+                private DateTime received;
+                private DateTime total;
                 public void agencyFunc()
                 {
                     HotelSupplier room = new HotelSupplier();
@@ -73,12 +77,23 @@ namespace CSE445_Proj1_TeamAwesome
                         roomNum = roomNum + 10;
                         Console.WriteLine("Agent {0} buys 10 rooms at ${1} per room. Currently at {2} rooms.", Thread.CurrentThread.Name, p, roomNum);
                         //send to order class
+                        //after receiving encoded string from order class, record time sent and send to multicell buffer
+                        sent = DateTime.Now;
+                        //send to multicellbuffer; calculate time when order confirmation is received.
+                        received = DateTime.Now;
+                        total = received - sent; //something is wrong here--I think we need to cast it as a timespan.
+
                     }
                     if (roomNum < 10)
                     {
                         roomNum = roomNum + 5;
                         Console.WriteLine("Agent {0} buys 5 rooms at ${1} per room. Currently at {2} rooms.", Thread.CurrentThread.Name, p, roomNum);
                         //send to order class
+                        //after receiving encoded string from order class, record time sent and send to multicell buffer
+                        sent = DateTime.Now;
+                        //send to multicellbuffer; calculate time when order confirmation is received.
+                        received = DateTime.Now;
+                        total = received - sent; //something is wrong here--I think we need to cast it as a timespan.
                     }
                     Console.WriteLine("Hotel {0} rooms are on sale: as low as ${1} per room.", Thread.CurrentThread.Name, p);
                 }
