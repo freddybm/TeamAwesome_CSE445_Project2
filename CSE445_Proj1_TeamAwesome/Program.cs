@@ -6,7 +6,6 @@ using System.Threading;
 
 namespace CSE445_Proj1_TeamAwesome
 {
-    public delegate void priceCutEvent(Int32 pr); //define a delegate
 
     static class Program
     {
@@ -14,6 +13,8 @@ namespace CSE445_Proj1_TeamAwesome
         /// The main entry point for the application.
         /// </summary>
         [STAThread]
+        
+        public delegate void priceCutEvent(Int32 pr); //define a delegate
 
         public class HotelSupplier
         {
